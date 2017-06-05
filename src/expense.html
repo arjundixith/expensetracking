@@ -1,0 +1,33 @@
+<template>
+  <section class="au-animate">
+    <h2>Expense Calculator</h2>
+    <form role="form">
+      <div class="form-group">
+        <label for="fn">Expense Name</label>
+          <input type="text" value.two-way="ExpName" class="form-control" id="fn" placeholder="ExpName">
+      </div>
+      <div class="form-group">
+        <label for="ln">Charged</label>
+        <input type="number" value.two-way="expense" class="form-control" id="ln" placeholder="expense">
+      </div>
+
+
+      <button type="button" click.delegate="add1()" class="btn btn-default">Next ></button>
+    </form>
+    <div class="form-group">
+      <table border="1">
+        <th>Expense Name</th>
+        <th>Value Charged</th>
+        <tr repeat.for="item of nameArray">
+          <td>${item.ExpName}</td>
+          <td>${item.expense}</td>
+        </tr>
+        <tr>
+          <td>${ExpName}</td>
+          <td>${expense}</td>
+        </tr>
+      </table>
+      <label>Total: ${total}</label>
+      </div>
+  </section>
+</template>
